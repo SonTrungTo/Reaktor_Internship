@@ -1,24 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core";
 
-import theme from "../theme";
-
-const styles = makeStyles(() => ({
-    text: {
-        color: theme.colors.primary,
-        textAlign: 'center'
-    }
-}));
-
-// const stylesText = {
-//     color: theme.colors.primary
-// };
+import Text from "../Text";
 
 export const FacemasksList: React.FC = () => {
-    const stylesText = styles();
     return (
-        <div id="text" className={stylesText.text}>
-            This is the product list
+        <div id="text">
+            <Text>
+                This is the product page. This lists all the products
+                that can be seen
+            </Text>
         </div>
     );
 };
