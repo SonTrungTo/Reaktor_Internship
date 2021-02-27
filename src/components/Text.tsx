@@ -28,8 +28,9 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-const Text: React.FC<{ fontWeight?: string, color?: string, fontSize?: string }>
-= ({ fontWeight, color, fontSize, ...props }) => {
+const Text: React.FC<{ fontWeight?: string, color?: string, fontSize?: string,
+style?: string }>
+= ({ fontWeight, color, fontSize, style, ...props }) => {
     const styles = useStyles();
     const normalStyle = styles.text;
     const fontWeightBoldStyle =
@@ -42,11 +43,12 @@ const Text: React.FC<{ fontWeight?: string, color?: string, fontSize?: string }>
         color === "textBar" ? styles.colorTextBar : "";
     const fontSizeSubheadingStyle =
         fontSize === "subheading" ? styles.fontSizeSubheading : "";
+    const extraStyles = style !== undefined ? style : "";
     
     return <Typography className={
         ` ${normalStyle} ${fontWeightBoldStyle} ` +
         ` ${colorPrimaryStyle} ${colorTextSecondaryStyle} ` +
-        ` ${colorTextBarStyle} ${fontSizeSubheadingStyle} `
+        ` ${colorTextBarStyle} ${fontSizeSubheadingStyle} ${extraStyles} `
     } {...props} />;
 };
 
