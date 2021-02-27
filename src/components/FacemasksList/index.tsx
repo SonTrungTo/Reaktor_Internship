@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import productsServices from "../../services/productsServices";
 
-//import Text from "../Text";
+import { AllProducts } from "../../types";
 import ProductItem from "../ProductItem";
 
 export const FacemasksList: React.FC = () => {
+    const [facemasks, setFacemasks] = useState<AllProducts[]>([]);
+
+    useEffect(() => {
+        productsServices.getAll('facemasks')
+        .then(data => {
+            setFacemasks(data);
+        })
+        .catch(err => console.log(err));
+    }, []);
+
     return (
         <div id="text">
-            <ProductItem type='facemasks' price={24}
-            id="1"
-            name="Son To"
-            color={['blue', 'red', 'green']}
-            manufacturer="Son To Oy" />
+            { facemasks.map(facemask =>
+            <ProductItem key={facemask.id} {...facemask} />) }
         </div>
     );
 };
