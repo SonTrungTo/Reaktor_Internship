@@ -5,8 +5,7 @@ const theme = {
         textSecondary: '#586069',
         textBar: '#ffffff',
         appBackgroundColor: '#24292e',
-        mainBackgroundColor: '#e1e4e8',
-        itemBackgroundColor: 'white',
+        itemBackgroundColor: '#e1e4e8',
         error: '#d73a4a'
     },
     fontSizes: {

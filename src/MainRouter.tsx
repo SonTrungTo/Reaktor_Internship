@@ -1,13 +1,17 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import FacemasksList from "./components/FacemasksList";
+import { Route, Switch, Redirect } from "react-router-dom";
+
+import ProductList from "./components/ProductList";
+import AppBar from "./components/AppBar";
 
 const MainRouter: React.FC = () => {
     return (
         <div>
-            Reaktor Internship
+            <AppBar />
             <Switch>
-                <Route path="/" exact component={FacemasksList} />
+                <Route path="/products/:type"
+                exact component={ProductList} />
+                <Redirect to="/products/facemasks" />
             </Switch>
         </div>
     );

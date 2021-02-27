@@ -16,7 +16,8 @@ const useStyles = makeStyles(() => ({
     card: {
         marginBottom: 10,
         marginLeft: 15,
-        marginRight: 15
+        marginRight: 15,
+        backgroundColor: theme.colors.itemBackgroundColor
     },
     priceText: {
         backgroundColor: theme.colors.primary,
