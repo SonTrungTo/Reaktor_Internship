@@ -6,7 +6,8 @@ const theme = {
         textBar: '#ffffff',
         appBackgroundColor: '#24292e',
         itemBackgroundColor: '#e1e4e8',
-        error: '#d73a4a'
+        error: '#d73a4a',
+        inactiveButton: '#474747'
     },
     fontSizes: {
         body: 14,

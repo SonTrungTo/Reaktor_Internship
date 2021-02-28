@@ -7,13 +7,30 @@ import theme from "./theme";
 
 const useStyles = makeStyles(() => ({
     linkButton: {
-
+        backgroundColor: theme.colors.inactiveButton,
+        '&:hover': {
+            backgroundColor: theme.colors.primary
+        },
+        width: '100%',
+        marginBottom: 15,
+        marginLeft: 10
     }
 }));
 
-const LinkButton: React.FC<{ to: string, style?: string }>
-= ({ to, style }) => {
-    
+const LinkButton: React.FC<{ to: string, style?: string, children: JSX.Element }>
+= ({ to, style, children }) => {
+    const styles = useStyles();
+    const normalStyles = styles.linkButton;
+    const extraStyles = style ? style : "";
+
+    return (
+        <Link to={to}>
+            <Button className={ `${normalStyles} ${extraStyles}` }
+            variant="contained">
+                {children}
+            </Button>
+        </Link>
+    );
 };
 
 export default LinkButton;
