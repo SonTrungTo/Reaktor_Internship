@@ -23,6 +23,10 @@ const useAvailability
             sessionStorage.setItem(manufacturer, JSON.stringify(data));
         })
         .catch(err => console.log(err));
+
+        return () => {
+            return;
+        };
     }, []);
 
     return {

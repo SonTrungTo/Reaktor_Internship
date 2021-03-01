@@ -4,6 +4,7 @@ import ProductItem from "../ProductItem";
 import useProducts from "../../hooks/useProducts";
 
 export const BeaniesList: React.FC = () => {
+    sessionStorage.clear();
     const { products } = useProducts('beanies');
 
     const productsList = products ? products
