@@ -11,3 +11,52 @@ The last remaning step is deployment, which I am working on it a bit.
 
 Due to the limitations of the API itself, there is not much I can do to improve
 the site speed, given its massive amount of datasets.
+
+```
+📦Reaktor_Internship
+ 📂src
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📂AppBar
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂AvailabilityIcon
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂BeaniesList
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂FacemasksList
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂GlovesList
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂Icons
+ ┃ ┃ ┃ ┣ 📜Icons.test.tsx
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂NavigationMenu
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📂ProductItem
+ ┃ ┃ ┃ ┣ 📜ProductItem.test.tsx
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┣ 📜LinkButton.tsx
+ ┃ ┃ ┣ 📜Text.tsx
+ ┃ ┃ ┗ 📜theme.ts
+ ┃ ┣ 📂hooks
+ ┃ ┃ ┣ 📜useAvailability.ts
+ ┃ ┃ ┗ 📜useProducts.ts
+ ┃ ┣ 📂services
+ ┃ ┃ ┣ 📜availabilityServices.ts
+ ┃ ┃ ┗ 📜productsServices.ts
+ ┃ ┣ 📜App.tsx
+ ┃ ┣ 📜MainRouter.tsx
+ ┃ ┣ 📜index.css
+ ┃ ┣ 📜index.tsx
+ ┃ ┣ 📜react-app-env.d.ts
+ ┃ ┣ 📜reportWebVitals.ts
+ ┃ ┣ 📜setupTests.ts
+ ┃ ┣ 📜types.ts
+ ┃ ┗ 📜utils.ts
+ ┣ 📜.eslintignore
+ ┣ 📜.eslintrc
+ ┣ 📜.gitignore
+ ┣ 📜Procfile
+ ┣ 📜README.md
+ ┣ 📜package.json
+ ┗ 📜tsconfig.json
+```
