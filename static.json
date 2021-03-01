@@ -3,5 +3,6 @@
     "/": {
       "origin": "https://bad-api-assignment.reaktor.com"
     }
-  }
+  },
+  "root": "dist/"
 }
