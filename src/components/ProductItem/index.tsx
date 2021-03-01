@@ -42,7 +42,7 @@ const ProductItem: React.FC<AllProducts>
     const styles = useStyles();
 
     return (
-        <Card className={styles.card} elevation={4}>
+        <Card className={styles.card} elevation={4} id="testCard">
             <CardHeader
             avatar={
                 <Avatar

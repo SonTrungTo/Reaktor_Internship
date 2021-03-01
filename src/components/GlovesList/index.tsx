@@ -10,7 +10,7 @@ export const GlovesList: React.FC = () => {
         : [];
 
     return (
-        <div id="text">
+        <div>
             { productsList.map(product =>
             <ProductItem key={product.id} {...product} />) }
         </div>
