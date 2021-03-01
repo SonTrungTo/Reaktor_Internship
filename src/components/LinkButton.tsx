@@ -14,6 +14,9 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         marginBottom: 15,
         marginLeft: 10
+    },
+    link: {
+        textDecoration: 'none'
     }
 }));
 
@@ -24,7 +27,7 @@ const LinkButton: React.FC<{ to: string, style?: string, children: JSX.Element }
     const extraStyles = style ? style : "";
 
     return (
-        <Link to={to}>
+        <Link to={to} className={styles.link}>
             <Button className={ `${normalStyles} ${extraStyles}` }
             variant="contained">
                 {children}

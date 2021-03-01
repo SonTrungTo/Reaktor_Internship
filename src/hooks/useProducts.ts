@@ -4,7 +4,7 @@ import productsServices from "../services/productsServices";
 import { AllProducts } from "../types";
 
 const useProducts = (type: AllProducts["type"]) => {
-    const [products, setProducts] = useState<AllProducts[]>([]);
+    const [products, setProducts] = useState<AllProducts[] | undefined>(undefined);
 
     useEffect(() => {
         productsServices.getAll(type)

@@ -3,10 +3,10 @@ import React from "react";
 import ProductItem from "../ProductItem";
 import useProducts from "../../hooks/useProducts";
 
-export const ProductList: React.FC = () => {
+export const GlovesList: React.FC = () => {
     const { products } = useProducts('gloves');
 
-    const productsList = Array.isArray(products) ? products
+    const productsList = products ? products
         : [];
 
     return (
@@ -17,4 +17,4 @@ export const ProductList: React.FC = () => {
     );
 };
 
-export default ProductList;
+export default GlovesList;

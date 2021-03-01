@@ -7,10 +7,9 @@ import Avatar from "@material-ui/core/Avatar";
 
 import theme from "../theme";
 import Text from "../Text";
+import AvailabilityIcon from "../AvailabilityIcon";
 import { AllProducts } from "../../types";
-import { FacemaskIcon,
-    BeanieIcon, GlovesIcon, CircleIcon } from "../Icons";
-import { assertNever } from "../../utils";
+import { CircleIcon } from "../Icons";
 
 const useStyles = makeStyles(() => ({
     card: {
@@ -39,24 +38,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ProductItem: React.FC<AllProducts>
-= ({ name, color, price, manufacturer, type }) => {
+= ({ id, name, color, price, manufacturer, type }) => {
     const styles = useStyles();
-
-    const renderIcon = (type: AllProducts["type"]) => {
-        switch (type) {
-            case 'facemasks':
-                return <FacemaskIcon available={true} />;
-            
-            case 'beanies':
-                return <BeanieIcon available={true} />;
-    
-            case 'gloves':
-                return <GlovesIcon available={true} />;
-        
-            default:
-                return assertNever(type);
-        }
-    };
 
     return (
         <Card className={styles.card} elevation={4}>
@@ -65,7 +48,7 @@ const ProductItem: React.FC<AllProducts>
                 <Avatar
                 aria-label="Type Icon"
                 className={styles.avatar} >
-                    { renderIcon(type) }
+                    <AvailabilityIcon type={type} manufacturer={manufacturer} id={id} />
                 </Avatar>
             }
             action={

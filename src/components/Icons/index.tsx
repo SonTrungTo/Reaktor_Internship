@@ -3,20 +3,59 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadSideMask,
     faMitten, faHatWizard, faCircle } from "@fortawesome/free-solid-svg-icons";
 
-export const FacemaskIcon: React.FC<{ available: boolean }>
-= ({ available }) => available ?
-<FontAwesomeIcon icon={faHeadSideMask} color="green" size="lg" /> :
-<FontAwesomeIcon icon={faHeadSideMask} color="red" size="lg" />;
+import { Availability } from "../../types";
+import { assertNever } from "../../utils";
 
-export const BeanieIcon: React.FC<{ available: boolean }>
-= ({ available }) => available ?
-<FontAwesomeIcon icon={faHatWizard} color="green" size="lg" /> :
-<FontAwesomeIcon icon={faHatWizard} color="red" size="lg" />;
+export const FacemaskIcon: React.FC<{ availability: Availability }>
+= ({ availability }) => {
+    switch (availability) {
+        case 'INSTOCK':
+            return <FontAwesomeIcon icon={faHeadSideMask} color="green" size="lg" />;
+    
+        case 'OUTOFSTOCK':
+            return <FontAwesomeIcon icon={faHeadSideMask} color="red" size="lg" />;
 
-export const GlovesIcon: React.FC<{ available: boolean }>
-= ({ available }) => available ?
-<FontAwesomeIcon icon={faMitten} color="green" size="lg" /> :
-<FontAwesomeIcon icon={faMitten} color="red" size="lg" />;
+        case 'LESSTHAN10':
+            return <FontAwesomeIcon icon={faHeadSideMask} color="yellow" size="lg" />;
+
+        default:
+            return assertNever(availability);
+    }
+};
+
+export const BeanieIcon: React.FC<{ availability: Availability }>
+= ({ availability }) => {
+    switch (availability) {
+        case 'INSTOCK':
+            return <FontAwesomeIcon icon={faHatWizard} color="green" size="lg" />;
+    
+        case 'OUTOFSTOCK':
+            return <FontAwesomeIcon icon={faHatWizard} color="red" size="lg" />;
+
+        case 'LESSTHAN10':
+            return <FontAwesomeIcon icon={faHatWizard} color="yellow" size="lg" />;
+
+        default:
+            return assertNever(availability);
+    }
+};
+
+export const GlovesIcon: React.FC<{ availability: Availability }>
+= ({ availability }) => {
+    switch (availability) {
+        case 'INSTOCK':
+            return <FontAwesomeIcon icon={faMitten} color="green" size="lg" />;
+    
+        case 'OUTOFSTOCK':
+            return <FontAwesomeIcon icon={faMitten} color="red" size="lg" />;
+
+        case 'LESSTHAN10':
+            return <FontAwesomeIcon icon={faMitten} color="yellow" size="lg" />;
+
+        default:
+            return assertNever(availability);
+    }
+};
 
 export const CircleIcon: React.FC<{ color: string, style?: string }>
 = ({ color, style }) => <FontAwesomeIcon

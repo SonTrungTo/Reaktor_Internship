@@ -9,7 +9,8 @@ import theme from "../theme";
 const useStyles = makeStyles(() => ({
     container: {
         flexDirection: 'column',
-        flexWrap: 'wrap'
+        top: 60,
+        position: 'sticky'
     },
     isActive: {
         backgroundColor: theme.colors.primary

@@ -3,11 +3,11 @@ import React from "react";
 import ProductItem from "../ProductItem";
 import useProducts from "../../hooks/useProducts";
 
-export const ProductList: React.FC = () => {
+export const FacemasksList: React.FC = () => {
     const { products } = useProducts('facemasks');
 
-    const productsList = Array.isArray(products) ? products
-        : [];
+    const productsList = products ? products
+    : [];
 
     return (
         <div id="text">
@@ -17,4 +17,4 @@ export const ProductList: React.FC = () => {
     );
 };
 
-export default ProductList;
+export default FacemasksList;

@@ -23,3 +23,18 @@ export type AllProducts =
     | Facemasks
     | Beanies
     | Gloves;
+
+export interface Response {
+    id: string,
+    DATAPAYLOAD: string
+}
+
+export interface ManufacturerInfo {
+    code: number,
+    response: Response[]
+}
+
+export type Availability =
+    |'INSTOCK'
+    |'OUTOFSTOCK'
+    |'LESSTHAN10';

@@ -1,16 +1,16 @@
 import React from "react";
 import { render, RenderResult } from "@testing-library/react"; // fireEvent is from here
 import { prettyDOM } from "@testing-library/dom";
-import { ProductList } from "../ProductList";
+import FacemasksList from "../FacemasksList";
 
-describe('<ProductList />', () => {
+describe('<FacemasksList />', () => {
     let component: RenderResult;
 
     beforeEach(() => {
-        component = render(<ProductList />);
+        component = render(<FacemasksList />);
     });
 
-    test('<ProductList /> rendered with text', () => {
+    test('<FacemaskList /> rendered with text', () => {
         const text = component.container.querySelector("#text");
         expect(text).toBeDefined();
         expect(text).toHaveTextContent("This is the product list");
