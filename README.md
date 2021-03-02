@@ -1,4 +1,4 @@
-## [Reaktor Internship Problem](https://reaktor-internship.herokuapp.com/products/facemasks)
+## [Reaktor Internship Problem](https://reaktor-internship.herokuapp.com)
 
 I have solved everything, including writing structured codes, designing an app interface that is minimalist yet
 easy to find information and writing some Jest tests, even if they are a bit simplistic. The point is to
