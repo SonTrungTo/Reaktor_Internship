@@ -62,9 +62,3 @@ Here is the structure of the codes.
  ┣ 📜package.json
  ┗ 📜tsconfig.json
 ```
-
-## Futher discussions
-
-Here are some of my thoughts on how we can improve the app.
-
-### Long loading time.

@@ -4,7 +4,6 @@ import ProductItem from "../ProductItem";
 import useProducts from "../../hooks/useProducts";
 
 export const FacemasksList: React.FC = () => {
-    sessionStorage.clear();
     const { products } = useProducts('facemasks');
 
     const productsList = products ? products
