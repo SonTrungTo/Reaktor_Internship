@@ -55,7 +55,8 @@ const ProductItem: React.FC<AllProducts>
                 <Text
                 fontWeight="bold"
                 color="textBar"
-                style={ styles.priceText } >
+                style={ styles.priceText }
+                id="price" >
                     { 
                     <React.Fragment>
                         <span>&euro; </span>
@@ -67,13 +68,15 @@ const ProductItem: React.FC<AllProducts>
             title={
                 <Text
                 fontSize="subheading"
-                fontWeight="bold">
+                fontWeight="bold"
+                id="name">
                     { name }
                 </Text>
             }
             subheader={
                 <Text
-                color="textSecondary">
+                color="textSecondary"
+                id="manufacturer">
                     { manufacturer }
                 </Text>
             } />
@@ -83,7 +86,7 @@ const ProductItem: React.FC<AllProducts>
                     Color(s):
                     <span>
                         { color
-                        .map(col => <CircleIcon
+                        .map(col => <CircleIcon id="colorSvg"
                         key={col} color={col} style={styles.colorDistance} /> ) }
                     </span>
                 </Text>

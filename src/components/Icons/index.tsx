@@ -57,6 +57,6 @@ export const GlovesIcon: React.FC<{ availability: Availability }>
     }
 };
 
-export const CircleIcon: React.FC<{ color: string, style?: string }>
-= ({ color, style }) => <FontAwesomeIcon
+export const CircleIcon: React.FC<{ color: string, style?: string, id?: string }>
+= ({ color, style, id }) => <FontAwesomeIcon id={id}
 icon={faCircle} color={color} size="sm" className={style} />;

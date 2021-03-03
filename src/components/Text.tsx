@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Text: React.FC<{ fontWeight?: string, color?: string, fontSize?: string,
-style?: string }>
+style?: string, id?: string }>
 = ({ fontWeight, color, fontSize, style, ...props }) => {
     const styles = useStyles();
     const normalStyle = styles.text;

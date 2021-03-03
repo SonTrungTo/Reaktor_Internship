@@ -3,15 +3,18 @@
 ## Important
 Please note that it might take a little while at first time for data to be loading.
 Try to refresh at the root page (otherwise, the message 'not found' is shown) since I am
-using Node guide the request to proxy to the API.
+using Node guide the request to proxy the API.
 
 After some refresh and a couple seconds waiting, the app will work beautifully.
 
 ## Result
 
 I have solved everything, including writing structured codes, designing an app interface that is minimalist yet
-easy to find information and writing some Jest tests, even if they are a bit simplistic. The point is to
-testing critical details of the components.
+easy to find information and writing some Jest tests, even if they are a bit simplistic.
+
+- Update: I added to the finishing touch by adding some additional Jest tests. The tests are not meant
+to be comprehensive but to serve as the guidelines for what I would want to test and what could
+be done better.
 
 Some components can be quite a little bit repetitive; however, I think it is better to write
 a simple solution than relying on an elegant solution.
