@@ -6,7 +6,6 @@ const baseUrl = '/v2/products';
 const getAll = async (product: AllProducts["type"]): Promise<AllProducts[]> => {
     const config = {
         headers: {
-            'x-force-error-mode': 'all',
             'Cache-Control': 'public, max-age=300, immutable' // 5 mins (60 secs * 5 mins)
         }
     };
